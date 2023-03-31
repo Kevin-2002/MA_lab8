@@ -13,7 +13,23 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
- <h3>Welcome to Mobile Apps Starter project 2023</h3>
+  <div>
+
+    <ion-card *ngFor="let movie of myMovies">
+      <ion-card-title>
+        {{movie.Title}}
+      </ion-card-title>
+      <ion-card-subtitle>
+        year:
+        {{movie.Year}}<br>
+        imdb ID:
+        {{movie.imdbID}}
+      </ion-card-subtitle>
+      <br>
+      <ion-card-content>
+        <img src="{{movie.Poster}}">
+      </ion-card-content>
+    </ion-card>
+
   </div>
 </ion-content>
